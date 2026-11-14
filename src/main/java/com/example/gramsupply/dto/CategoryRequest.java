@@ -1,0 +1,15 @@
+package com.example.gramsupply.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public record CategoryRequest(
+
+        @NotBlank(message = "Category name is required")
+        @Size(max = 120)
+        String name,
+
+        @Size(max = 500)
+        String description
+
+) {}
