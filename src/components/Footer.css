@@ -1,0 +1,15 @@
+.gf { margin-top: 56px; background: var(--green-900); color: var(--green-100); }
+.gf .vine-divider { background-color: var(--ivory); height: 20px; }
+.gf-main { background-color: var(--green-800); padding: 44px 0 32px; }
+.gf-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 32px; }
+.gf-brand strong { font-family: var(--font-display); font-size: 34px; color: var(--white); font-weight: 700; }
+.gf-brand p { margin: 8px 0 14px; max-width: 360px; line-height: 1.55; }
+.gf-contact { color: var(--gold-light); font-weight: 700; text-decoration: none; }
+.gf-contact:hover { text-decoration: underline; }
+.gf nav { display: flex; flex-direction: column; gap: 4px; }
+.gf h4 { margin: 0 0 8px; color: var(--gold-light); font-size: 14px; letter-spacing: 1.4px; text-transform: uppercase; }
+.gf nav a { display: inline-flex; align-items: center; min-height: 36px; color: var(--white); text-decoration: none; }
+.gf nav a:hover { color: var(--gold-light); text-decoration: underline; }
+.gf-bottom { padding: 16px; text-align: center; font-size: 14px; color: var(--green-300); background: var(--green-900); }
+@media (max-width: 900px) { .gf-grid { grid-template-columns: 1fr 1fr; } .gf-brand { grid-column: 1 / -1; } }
+@media (max-width: 520px) { .gf-grid { grid-template-columns: 1fr; } }

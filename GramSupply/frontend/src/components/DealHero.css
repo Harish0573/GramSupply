@@ -1,0 +1,36 @@
+/* Dynamic marketplace campaign banner */
+.gs-deal-hero{position:relative;display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:25px;min-height:390px;padding:38px 42px;margin:0 -21px 25px;overflow:hidden;background:linear-gradient(105deg,#f8fcff 0%,#e8f7ff 52%,#c9edff 100%);border-bottom:1px solid #d6edfb}
+.gs-deal-hero:before{content:"";position:absolute;width:520px;height:520px;right:5%;top:-290px;border-radius:50%;background:#fff7}
+.gs-deal-copy{position:relative;z-index:2;max-width:590px}
+.gs-deal-eyebrow{display:inline-flex;align-items:center;gap:7px;color:#087bd0;font-size:11px;font-weight:900;letter-spacing:1.2px}
+.gs-deal-offer{display:table;margin:15px 0 10px;padding:7px 13px;border-radius:6px;background:#e21f45;color:#fff;font-size:14px;font-weight:950;letter-spacing:.5px;box-shadow:0 5px 13px #d9234530}
+.gs-deal-copy h1{margin:0;color:#122d4b;font-size:clamp(35px,4.2vw,55px);line-height:1.03;font-weight:950;letter-spacing:-1.8px}
+.gs-deal-copy h1 em{color:#0787e8;font-style:normal}
+.gs-deal-copy>p{max-width:480px;margin:13px 0 18px;color:#506a82;font-size:14px;line-height:1.6}
+.gs-deal-actions{display:flex;gap:10px;flex-wrap:wrap}
+.gs-deal-primary,.gs-deal-secondary{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:43px;padding:0 18px;border-radius:7px;font-size:12px;font-weight:850;text-decoration:none;transition:.2s}
+.gs-deal-primary{background:#087fe0;color:white;box-shadow:0 5px 14px #087fe033}
+.gs-deal-primary:hover{background:#0069c5;transform:translateY(-2px)}
+.gs-deal-secondary{border:1px solid #9acff2;background:#fff;color:#153a5d}
+.gs-deal-secondary:hover{border-color:#0787e8;color:#0787e8}
+.gs-deal-points{display:flex;gap:20px;margin-top:22px;color:#557189;font-size:11px;font-weight:700}
+.gs-deal-points span{display:flex;align-items:center;gap:6px}
+.gs-deal-points svg{color:#0787e8}
+.gs-deal-dots{display:flex;gap:7px;margin-top:20px}
+.gs-deal-dots button{width:8px;height:8px;padding:0;border:0;border-radius:20px;background:#9dcde9;cursor:pointer;transition:width .2s}
+.gs-deal-dots button.active{width:25px;background:#0787e8}
+.gs-deal-visual{position:relative;min-height:310px;display:grid;place-items:center}
+.gs-deal-orbit{position:absolute;width:min(88%,390px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#b8e9ff,#d8f3ff 67%,#e9f9ff 68%);border:1px solid #ffffffa8}
+.gs-deal-product{position:relative;z-index:2;width:65%;height:270px;display:grid;place-items:center;border:1px solid #ffffffb8;border-radius:24px;background:#ffffffa8;box-shadow:0 18px 45px #17658b22;transform:rotate(-3deg)}
+.gs-deal-product img{width:100%;height:100%;object-fit:contain;padding:14px;mix-blend-mode:multiply}
+.gs-deal-sticker{position:absolute;z-index:4;right:3%;top:8%;width:110px;height:110px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:#e92349;color:white;border:5px solid #fff;box-shadow:0 8px 20px #c824493b;transform:rotate(9deg);text-align:center}
+.gs-deal-sticker strong{font-size:13px;font-weight:950}
+.gs-deal-sticker small{font-size:8px;opacity:.9}
+.gs-deal-mini{position:absolute;z-index:3;width:130px;height:105px;border:1px solid #fff;border-radius:15px;background:#ffffffdb;box-shadow:0 9px 24px #17658b1b;overflow:hidden}
+.gs-deal-mini img{width:100%;height:100%;object-fit:contain;padding:8px;mix-blend-mode:multiply}
+.gs-deal-mini.mini-one{left:0;top:10%}
+.gs-deal-mini.mini-two{left:3%;bottom:4%}
+.gs-deal-arrow{position:absolute;z-index:5;top:50%;width:36px;height:36px;border:1px solid #c7e8fa;border-radius:50%;background:#fff;color:#087fe0;display:grid;place-items:center;cursor:pointer;box-shadow:0 5px 15px #17658b1b}
+.gs-deal-arrow.prev{left:-2px}.gs-deal-arrow.next{right:-2px}
+@media(max-width:850px){.gs-deal-hero{grid-template-columns:1fr .8fr;padding:30px 25px;min-height:350px}.gs-deal-copy h1{font-size:38px}.gs-deal-visual{min-height:260px}.gs-deal-product{height:220px}.gs-deal-mini{width:100px;height:82px}}
+@media(max-width:600px){.gs-deal-hero{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:25px 19px 12px;margin:0 -12px 20px;min-height:0}.gs-deal-copy h1{font-size:35px}.gs-deal-copy>p{font-size:12px;margin:10px 0 14px}.gs-deal-offer{font-size:12px;margin:11px 0 8px}.gs-deal-primary,.gs-deal-secondary{min-height:40px;padding:0 13px;font-size:10px}.gs-deal-points{gap:12px;font-size:9px;margin-top:14px}.gs-deal-dots{margin-top:13px}.gs-deal-visual{min-height:210px;margin-top:3px}.gs-deal-orbit{width:220px}.gs-deal-product{width:57%;height:180px}.gs-deal-sticker{width:82px;height:82px;right:7%;top:4%;border-width:3px}.gs-deal-sticker svg{width:18px}.gs-deal-sticker strong{font-size:10px}.gs-deal-mini{width:82px;height:68px}.gs-deal-arrow{width:30px;height:30px}.gs-deal-arrow.prev{left:0}.gs-deal-arrow.next{right:0}}

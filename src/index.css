@@ -1,0 +1,180 @@
+/* ============================================================
+   GramSupply design tokens: Mehndi green, ivory and antique gold.
+   Every page uses these variables, so a colour is changed in one place.
+   ============================================================ */
+:root {
+  --green-900: #0f3626;
+  --green-800: #174c35; /* forest green: main brand colour */
+  --green-700: #1f5e42;
+  --green-600: #3e6b45;
+  --green-500: #668b52; /* mehndi green: accents and icons */
+  --green-300: #a9c095;
+  --green-100: #e6eedd;
+  --ivory: #faf7ed;
+  --ivory-200: #f1ecd9;
+  --ivory-300: #e4dcc0;
+  --white: #ffffff;
+  --gold: #c5a15a; /* antique gold */
+  --gold-dark: #8f6f2a; /* gold that is dark enough for text on ivory */
+  --gold-light: #e2cd9c;
+  --ink: #252b27; /* charcoal */
+  --ink-soft: #444c46;
+  --muted: #646d67;
+  --line: #e2dcc3;
+  --danger: #b42318;
+  --success: #1b7a47;
+  --warning: #9a6200;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 3px rgba(23, 76, 53, 0.1);
+  --shadow: 0 6px 20px rgba(23, 76, 53, 0.12);
+  --header-h: 72px;
+  --container: 1440px;
+  --font-body: "Mukta", "Noto Sans Devanagari", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Noto Serif Devanagari", Georgia, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: hidden; /* no sideways scrolling on phones */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+::selection {
+  background: var(--green-100);
+  color: var(--green-900);
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* a shared page width */
+.gs-container {
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* screen-reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* subtle paisley texture, never stronger than a whisper */
+.mehndi-bg {
+  background-image: url("/patterns/mehndi.svg");
+  background-size: 140px;
+}
+.mehndi-bg-light {
+  background-image: url("/patterns/mehndi-light.svg");
+  background-size: 140px;
+}
+.vine-divider {
+  height: 18px;
+  background: url("/patterns/vine.svg") repeat-x center;
+  opacity: 0.9;
+}
+
+/* shared buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 2px solid var(--green-800);
+  border-radius: var(--radius-sm);
+  background: var(--green-800);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn:hover {
+  background: var(--green-900);
+  border-color: var(--green-900);
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.btn-gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
+.btn-outline {
+  background: var(--white);
+  color: var(--green-800);
+}
+.btn-outline:hover {
+  background: var(--green-800);
+  color: var(--white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}

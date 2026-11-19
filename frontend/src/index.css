@@ -1,0 +1,288 @@
+:root {
+  --forest-green: #174C35;
+  --mehndi-green: #668B52;
+  --ivory: #FAF7ED;
+  --white: #FFFFFF;
+  --antique-gold: #C5A15A;
+  --antique-gold-light: rgba(197, 161, 90, 0.18);
+  --charcoal: #252B27;
+  --muted-text: #5A625D;
+  --border-color: #E2DEC9;
+  --danger: #B91C1C;
+  --success: #15803D;
+  --shadow-sm: 0 1px 3px rgba(23, 76, 53, 0.08);
+  --shadow-md: 0 4px 12px rgba(23, 76, 53, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Subtle Mehndi Ornamental Divider */
+.mehndi-divider {
+  height: 12px;
+  width: 100%;
+  background-image: radial-gradient(circle, var(--antique-gold) 1.5px, transparent 1.5px),
+                    linear-gradient(to right, transparent, var(--antique-gold), transparent);
+  background-size: 24px 12px, 100% 1px;
+  background-position: center;
+  background-repeat: repeat-x, no-repeat;
+  opacity: 0.45;
+  margin: 1.5rem 0;
+}
+
+/* Subtle Botanical Corner Accent */
+.mehndi-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mehndi-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--antique-gold);
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header & Navigation */
+.site-header {
+  background-color: var(--forest-green);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--antique-gold);
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: var(--white);
+}
+
+.brand-badge {
+  font-size: 0.65rem;
+  background: var(--antique-gold);
+  color: var(--charcoal);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pin-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(197, 161, 90, 0.4);
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  color: var(--ivory);
+  font-size: 0.8rem;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 240px;
+  max-width: 620px;
+  display: flex;
+  background: var(--white);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.search-bar:focus-within {
+  border-color: var(--antique-gold);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.92rem;
+  color: var(--charcoal);
+  outline: none;
+}
+
+.search-bar button {
+  background: var(--antique-gold);
+  border: none;
+  padding: 0 1.1rem;
+  color: var(--charcoal);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.action-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ivory);
+  font-size: 0.88rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+}
+
+.action-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.badge-count {
+  background: var(--antique-gold);
+  color: var(--charcoal);
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 1px 6px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.category-nav {
+  background: var(--mehndi-green);
+  color: var(--white);
+  border-bottom: 1px solid rgba(197, 161, 90, 0.35);
+  overflow-x: auto;
+}
+
+.category-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.category-nav-inner a:hover,
+.category-nav-inner button:hover {
+  color: var(--ivory);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Grids */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.15rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--forest-green);
+  color: var(--white);
+  border: 1px solid var(--forest-green);
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #113827;
+}
+
+.btn-secondary {
+  background: var(--antique-gold);
+  color: var(--charcoal);
+  border: 1px solid var(--antique-gold);
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.btn-outline {
+  background: var(--white);
+  color: var(--forest-green);
+  border: 1px solid var(--forest-green);
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--ivory);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .search-bar {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
